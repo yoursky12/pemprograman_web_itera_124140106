@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Latihan JavaScript</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Latihan JavaScript</h1>
+
+    <!-- 1. Form Mahasiswa -->
+    <section>
+        <h2>1. Tambah Data Mahasiswa</h2>
+
+        <form id="formMahasiswa">
+
+            <input 
+                type="text" 
+                id="nama" 
+                placeholder="Nama"
+            >
+
+            <input 
+                type="text" 
+                id="nim" 
+                placeholder="NIM"
+            >
+
+            <input 
+                type="text" 
+                id="jurusan" 
+                placeholder="Jurusan"
+            >
+
+            <button type="submit">Tambah</button>
+
+        </form>
+
+        <h3>Data Mahasiswa</h3>
+        <ul id="daftarMahasiswa"></ul>
+    </section>
+
+
+    <!-- 2. Search API -->
+    <section>
+        <h2>2. Search Post dari API</h2>
+
+        <input 
+            type="text" 
+            id="searchPost" 
+            placeholder="Cari berdasarkan title"
+        >
+
+        <button id="cariPost">Cari</button>
+
+        <div id="hasilPost"></div>
+    </section>
+
+
+    <!-- 3. Dark Mode -->
+    <section>
+        <h2>3. Dark Mode</h2>
+
+        <button id="darkMode">
+            Dark Mode
+        </button>
+    </section>
+
+
+    <!-- 4. Pagination -->
+    <section>
+        <h2>4. Pagination Post</h2>
+
+        <div id="paginationPost"></div>
+
+        <button id="previous">Previous</button>
+        <button id="next">Next</button>
+    </section>
+
+
+    <!-- 5. Todo List -->
+    <section>
+        <h2>5. Todo List</h2>
+
+        <input 
+            type="text" 
+            id="todoInput" 
+            placeholder="Masukkan todo"
+        >
+
+        <button id="tambahTodo">
+            Tambah
+        </button>
+
+        <ul id="daftarTodo"></ul>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

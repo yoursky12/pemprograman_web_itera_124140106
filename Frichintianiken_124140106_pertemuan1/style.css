@@ -1,0 +1,164 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.pos-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-section, .cart-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.25);
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block;
+    min-height: 1.2em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Hanya tombol Tambah ke Keranjang yang menggunakan warna biru */
+#add-btn {
+    background-color: #0d6efd;
+    color: white;
+}
+
+#add-btn:hover {
+    background-color: #0b5ed7;
+}
+
+#reset-btn {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 10px;
+}
+
+#reset-btn:hover {
+    background-color: #bb2d3b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e7f1ff;
+    color: #333;
+}
+
+.summary-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #e7f1ff;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.promo-group {
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-group input {
+    width: 120px;
+    padding: 5px;
+}
+
+.total-final {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.payment-section {
+    margin-top: 20px;
+    background: #f8fbff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e7f1ff;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    width: auto;
+}
+
+.btn-delete:hover {
+    background-color: #bb2d3b;
+}
