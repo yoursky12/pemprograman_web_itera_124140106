@@ -1,1 +1,7 @@
-** pemprograman_web_itera_124140106 **
+# PRAKTIKUM PAW
+
+## Identitas
+
+- **Nama:** Frichintia Niken Gita Natasyah
+- **NIM:** 124140106
+- **Mata Kuliah:** Pemrograman Aplikasi Web
