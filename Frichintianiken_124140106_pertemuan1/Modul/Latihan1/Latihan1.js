@@ -1,24 +1,33 @@
-// 1. Data diri menggunakan const dan let
-const nama = "Frichintia";
+// ==========================================
+// 1. Data Diri
+// ==========================================
+
+const nama = "Frichintia Niken Gita Natasyah";
 let umur = 20;
-const kotaAsal = "Prabumulih";
+const kota = "Bandar Lampung";
 
 console.log("Nama:", nama);
 console.log("Umur:", umur);
-console.log("Kota Asal:", kotaAsal);
+console.log("Kota Asal:", kota);
 
 
-// 2. Pengecekan kelulusan
+// ==========================================
+// 2. Pengecekan Kelulusan
+// ==========================================
+
 let nilai = 80;
 
-if (nilai >= 70) {
+if(nilai >= 70){
     console.log("Keterangan: Lulus");
 } else {
     console.log("Keterangan: Tidak Lulus");
 }
 
 
-// 3. Kategori umur
+// ==========================================
+// 3. Kategori Umur
+// ==========================================
+
 let usia = 20;
 
 if (usia < 12) {
@@ -32,7 +41,10 @@ if (usia < 12) {
 }
 
 
-// 4. Konversi angka hari menggunakan switch-case
+// ==========================================
+// 4. Konversi Angka Hari
+// ==========================================
+
 let angkaHari = 3;
 
 switch (angkaHari) {
@@ -62,7 +74,10 @@ switch (angkaHari) {
 }
 
 
-// 5. Kalkulator grade menggunakan ternary operator
+// ==========================================
+// 5. Grade Nilai dengan Ternary
+// ==========================================
+
 let nilaiGrade = 85;
 
 let grade = nilaiGrade >= 80 ? "A" :

@@ -1,44 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini POS - Kasir</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div class="container">
+
         <h1>IKUTIN KASIR</h1>
-        
+
         <div class="pos-wrapper">
-            <!-- Form Input Barang -->
+
+            <!-- ==========================================
+                 FORM INPUT BARANG
+                 ========================================== -->
+
             <div class="form-section">
+
                 <h2>Tambah Barang</h2>
+
                 <form id="item-form">
+
                     <div class="form-group">
-                        <label for="item-name">Nama Barang</label>
-                        <input type="text" id="item-name" placeholder="Contoh: Buku Tulis">
-                        <small class="error-msg" id="error-name"></small>
+
+                        <label for="item-name">
+                            Nama Barang
+                        </label>
+
+                        <input
+                            type="text"
+                            id="item-name"
+                            placeholder="Contoh: Buku Tulis"
+                        >
+
+                        <small
+                            class="error-msg"
+                            id="error-name">
+                        </small>
+
                     </div>
+
+
                     <div class="form-group">
-                        <label for="item-price">Harga Satuan (Rp)</label>
-                        <input type="number" id="item-price" placeholder="Min. 500">
-                        <small class="error-msg" id="error-price"></small>
+
+                        <label for="item-price">
+                            Harga Satuan (Rp)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="item-price"
+                            placeholder="Min. 500"
+                        >
+
+                        <small
+                            class="error-msg"
+                            id="error-price">
+                        </small>
+
                     </div>
+
+
                     <div class="form-group">
-                        <label for="item-qty">Jumlah / Qty</label>
-                        <input type="number" id="item-qty" placeholder="Min. 1">
-                        <small class="error-msg" id="error-qty"></small>
+
+                        <label for="item-qty">
+                            Jumlah / Qty
+                        </label>
+
+                        <input
+                            type="number"
+                            id="item-qty"
+                            placeholder="Min. 1"
+                        >
+
+                        <small
+                            class="error-msg"
+                            id="error-qty">
+                        </small>
+
                     </div>
-                    <button type="submit" id="add-btn">Tambah ke Keranjang</button>
+
+
+                    <button
+                        type="submit"
+                        id="add-btn">
+                        Tambah ke Keranjang
+                    </button>
+
                 </form>
+
             </div>
 
-            <!-- Keranjang Belanja -->
+
+            <!-- ==========================================
+                 KERANJANG BELANJA
+                 ========================================== -->
+
             <div class="cart-section">
+
                 <h2>Daftar Belanja</h2>
+
                 <table id="cart-table">
+
                     <thead>
+
                         <tr>
                             <th>No</th>
                             <th>Nama Barang</th>
@@ -47,46 +117,133 @@
                             <th>Subtotal</th>
                             <th>Aksi</th>
                         </tr>
+
                     </thead>
+
                     <tbody id="cart-body">
                         <!-- Data barang akan muncul di sini -->
                     </tbody>
+
                 </table>
 
+
+                <!-- ==========================================
+                     TOTAL BELANJA
+                     ========================================== -->
+
                 <div class="summary-section">
+
                     <div class="summary-row">
-                        <span>Total Belanja:</span>
-                        <span id="total-price">Rp 0</span>
+
+                        <span>
+                            Total Belanja:
+                        </span>
+
+                        <span id="total-price">
+                            Rp 0
+                        </span>
+
                     </div>
+
+
                     <div class="summary-row">
-                        <span>Diskon (10% > Rp 50rb):</span>
-                        <span id="discount-amount">Rp 0</span>
+
+                        <span>
+                            Diskon 10% (Min. Rp 50.000):
+                        </span>
+
+                        <span id="discount-amount">
+                            Rp 0
+                        </span>
+
                     </div>
+
+
                     <div class="summary-row promo-group">
-                        <label for="promo-code">Kode Promo:</label>
-                        <input type="text" id="promo-code" placeholder="Contoh: HEMAT10">
+
+                        <label for="promo-code">
+                            Kode Promo:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="promo-code"
+                            placeholder="Contoh: HEMAT10"
+                        >
+
                     </div>
+
+
                     <div class="summary-row total-final">
-                        <span>Total Akhir:</span>
-                        <span id="final-price">Rp 0</span>
+
+                        <span>
+                            Total Akhir:
+                        </span>
+
+                        <span id="final-price">
+                            Rp 0
+                        </span>
+
                     </div>
+
                 </div>
 
+
+                <!-- ==========================================
+                     PEMBAYARAN
+                     ========================================== -->
+
                 <div class="payment-section">
+
                     <div class="form-group">
-                        <label for="payment-amount">Uang Bayar (Rp)</label>
-                        <input type="number" id="payment-amount" placeholder="Masukkan nominal">
+
+                        <label for="payment-amount">
+                            Uang Bayar (Rp)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="payment-amount"
+                            placeholder="Masukkan nominal"
+                        >
+
                     </div>
+
+
                     <div class="summary-row">
-                        <span>Kembalian:</span>
-                        <span id="change-amount">Rp 0</span>
+
+                        <span>
+                            Kembalian:
+                        </span>
+
+                        <span id="change-amount">
+                            Rp 0
+                        </span>
+
                     </div>
-                    <p id="payment-status" class="error-msg"></p>
-                    <button id="reset-btn">Transaksi Baru</button>
+
+
+                    <p
+                        id="payment-status"
+                        class="error-msg">
+                    </p>
+
+
+                    <button id="reset-btn">
+                        Transaksi Baru
+                    </button>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
