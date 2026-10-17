@@ -1,7 +1,7 @@
-# Aplikasi Jadwal Kuliah
+# website Jadwal Kuliah
 
 ## Deskripsi
-Aplikasi Jadwal Kuliah dibuat untuk membantu mencatat dan mengatur jadwal kuliah. Aplikasi ini bisa digunakan untuk menambah, mengedit, menghapus, dan melihat jadwal berdasarkan hari.
+website Jadwal Kuliah dibuat untuk membantu mencatat dan mengatur jadwal kuliah dan bisa digunakan untuk menambah, mengedit, menghapus, dan melihat jadwal berdasarkan hari.
 
 ## Fitur
 - Menambah, mengedit, dan menghapus jadwal kuliah.
@@ -40,4 +40,4 @@ Beberapa fitur ES6+ yang digunakan dalam aplikasi ini:
 2. Pastikan koneksi internet aktif agar Tailwind CSS dan informasi cuaca dapat dimuat.
 
 ## Kesimpulan
-Melalui aplikasi ini, saya menerapkan JavaScript untuk membuat fitur jadwal kuliah yang bisa digunakan secara interaktif, termasuk mengelola data, menggunakan API, dan menyimpan data dengan Local Storage.
+menerapkan JavaScript untuk membuat fitur jadwal kuliah yang bisa digunakan baik, termasuk mengelola data, menggunakan API, dan menyimpan data dengan Local Storage.
