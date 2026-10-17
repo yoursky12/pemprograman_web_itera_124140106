@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { 
+        --bg: #ffffff; 
+        --fg: #000000; 
+      }
+    .invert-theme { 
+        --bg: #000000;  
+        --fg: #ffffff; 
+      }
+    body { 
+      background: var(--bg); 
+      color: var(--fg); 
+      font-family: ui-sans-serif, system-ui, sans-serif; 
+      transition: background 0.2s, color 0.2s; 
+    }
+    .mono { 
+      font-family: ui-monospace, monospace; 
+    }
+    .line-b { 
+      border-bottom: 1px solid var(--fg); 
+    }
+    .line-t { 
+      border-top: 1px solid var(--fg); 
+    }
+    .box-thin { 
+      border: 1px solid var(--fg); 
+      background: var(--bg); 
+      color: var(--fg); 
+    }
+    .btn-inv { 
+      background: var(--fg); 
+      color: var(--bg); 
+    }
+    .input-min { 
+      background: transparent; 
+      color: var(--fg); 
+      border-bottom: 1px solid var(--fg); 
+      outline: none; 
+      padding: 6px 0; 
+    }
+    select.input-min option { 
+      background: var(--bg); 
+      color: var(--fg); 
+    }
+  </style>
+</head>
+<body>
+
+  <main class="w-full h-screen p-[5%] max-w-full mx-auto flex flex-col justify-between overflow-hidden relative">
+    <header class="flex flex-wrap justify-between items-end gap-4 pb-6 line-b shrink-0">
+      <div>
+        <p id="clock" class="mono text-xs uppercase tracking-widest opacity-60">Memuat waktu...</p>
+        <h1 id="greeting" class="text-3xl md:text-4xl font-light tracking-tight mt-1">Selamat Datang.</h1>
+        <p class="text-xs opacity-60 mt-1">Fokus pada jadwal kuliahmu hari ini.</p>
+      </div>
+      <div class="flex items-center gap-3 mono text-xs">
+        <span id="weather" onclick="app.loadWeather()" class="cursor-pointer hover:underline" title="Klik untuk refresh">Memuat cuaca...</span>
+        <span>·</span>
+        <button onclick="app.toggleTheme()" class="hover:underline font-bold">Ubah Tema</button>
+      </div>
+    </header>
+
+    <div class="flex flex-wrap justify-between items-center gap-3 py-4 shrink-0 relative">
+      
+      <div id="day-filters" class="flex flex-wrap gap-4 text-sm"></div>
+
+      <div class="flex items-center gap-2 text-xs mono">
+        <button onclick="app.copySchedule()" id="copy-btn" class="px-3 py-1.5 hover:underline">Salin Teks</button>
+        <button onclick="app.shareWA()" class="px-3 py-1.5 hover:underline">Kirim WA ↗</button>
+        <button onclick="app.toggleForm()" id="toggle-form-btn" class="btn-inv px-4 py-2 font-medium">+ Jadwal</button>
+      </div>
+
+      <div id="form-dropdown" class="hidden absolute right-0 top-14 z-20 w-full md:w-96 box-thin p-6 shadow-2xl">
+        <div class="flex justify-between items-center mb-4">
+          <h2 id="form-title" class="text-xs font-bold uppercase tracking-widest">Tambah Jadwal Kuliah</h2>
+          <button onclick="app.toggleForm(false)" class="text-xs mono hover:underline">Tutup [×]</button>
+        </div>
+        <form onsubmit="app.saveCourse(event)" class="space-y-4 text-sm">
+          <input type="hidden" id="c-id">
+          <div>
+            <label class="text-[10px] mono uppercase opacity-60">Mata Kuliah</label>
+            <input id="c-name" class="input-min w-full" placeholder="Mis: Pemrograman Web" required>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-[10px] mono uppercase opacity-60">Hari</label>
+              <select id="c-day" class="input-min w-full">
+                <option>Senin</option><option>Selasa</option><option>Rabu</option>
+                <option>Kamis</option><option>Jumat</option><option>Sabtu</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[10px] mono uppercase opacity-60">Ruangan</label>
+              <input id="c-room" class="input-min w-full" placeholder="GK2-104" required>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-[10px] mono uppercase opacity-60">Jam Mulai</label>
+              <input type="time" id="c-start" class="input-min w-full mono" required>
+            </div>
+            <div>
+              <label class="text-[10px] mono uppercase opacity-60">Jam Selesai</label>
+              <input type="time" id="c-end" class="input-min w-full mono" required>
+            </div>
+          </div>
+          <button type="submit" id="submit-btn" class="btn-inv w-full py-2.5 mt-2 text-xs mono uppercase tracking-wider">Simpan Jadwal</button>
+        </form>
+      </div>
+    </div>
+
+    <section id="schedule-list" class="flex-1 overflow-y-auto divide-y divide-current/15 pr-1"></section>
+
+    <footer class="pt-3 line-t flex justify-between items-center text-xs mono opacity-60 shrink-0">
+      <span id="total-count">0 Mata Kuliah</span>
+    </footer>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
+
