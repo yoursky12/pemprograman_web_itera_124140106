@@ -31,6 +31,8 @@ Beberapa fitur ES6+ yang digunakan dalam aplikasi ini:
 - `async/await`.
 
 ## Screenshot
+<img width="929" height="421" alt="image" src="https://github.com/user-attachments/assets/732ede0b-f151-419e-9874-e5c08182057b" />
+<img width="923" height="404" alt="image" src="https://github.com/user-attachments/assets/65aad8e6-5dad-41ec-9647-234225efc88c" />
 
 
 ## Cara Menjalankan
