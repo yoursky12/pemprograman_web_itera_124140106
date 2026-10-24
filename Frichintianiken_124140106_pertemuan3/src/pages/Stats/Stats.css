@@ -1,4 +1,0 @@
-.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.stat { border: 1px solid var(--border); border-radius: 4px; padding: 20px; display: grid; gap: 4px; }
-.stat-value { font-size: 2rem; font-weight: 600; }
-.stat-label { color: var(--muted); font-size: 0.85rem; }
