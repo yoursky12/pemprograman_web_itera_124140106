@@ -23,12 +23,12 @@ class ScheduleApp {
     const hr = now.getHours();
     const greet =
       hr < 11
-        ? "Selamat Morning."
+        ? "Selamat Morning"
         : hr < 15
           ? "Selamat Afternoon"
           : hr < 18
-            ? "Selamat Sore."
-            : "Selamat Evening";
+            ? "Selamat Afternoon"
+            : "Selamat Night";
     document.getElementById("greeting").textContent = greet;
     document.getElementById("clock").textContent =
       now.toLocaleString("id-ID", { dateStyle: "full", timeStyle: "short" }) +
