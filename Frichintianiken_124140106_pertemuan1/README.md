@@ -1,0 +1,45 @@
+﻿# pemprograman_web_124140106
+
+# Praktikum PAW
+
+## Identitas
+
+**Nama:** Frichintia Niken Gita Natasyah  
+**Mata Kuliah:** Pemrograman Aplikasi Web  
+**Materi Praktikum:** JavaScript  
+
+---
+
+# Deskripsi
+
+Praktikum ini membahas dasar-dasar JavaScript sampai penerapannya dalam pembuatan aplikasi web sederhana.
+
+Materi dan latihan yang dikerjakan meliputi penggunaan variabel, tipe data, operator, percabangan, perulangan, function, array, object, DOM manipulation, event handler, Fetch API, localStorage, serta pembuatan aplikasi kasir sederhana menggunakan JavaScript.
+
+Praktikum terdiri dari Latihan 1, Latihan 2, Latihan 3, Latihan 4, dan tugas pembuatan aplikasi **Kasir & Keranjang Belanja Sederhana (Mini POS)**.
+
+---
+
+# Struktur Praktikum
+
+```text
+Praktikum JavaScript/
+│
+├── Latihan 1/
+│   └── Latihan1.js
+│
+├── Latihan 2/
+│   └── Latihan2.js
+│
+├── Latihan 3/
+│   └── Latihan3.js
+│
+├── Latihan 4/
+│   ├── Latihan4.html
+│   ├── Latihan4.css
+│   └── Latihan4.js
+│
+└── Mini POS/
+    ├── index.html
+    ├── style.css
+    └── script.js
