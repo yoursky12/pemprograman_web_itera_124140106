@@ -1,10 +1,10 @@
 
 mahasiswa = [
-    {"nama": "Fichintia niken", "nim": "124140101", "nilai_uts": 85, "nilai_uas": 90, "nilai_tugas": 80},
+    {"nama": "Fichintia niken", "nim": "124140101", "nilai_uts": 75, "nilai_uas": 90, "nilai_tugas": 80},
     {"nama": "Gede valendra", "nim": "124140102", "nilai_uts": 90, "nilai_uas": 95, "nilai_tugas": 80},
     {"nama": "Olivia", "nim": "124140103", "nilai_uts": 80, "nilai_uas": 85, "nilai_tugas": 90},
-    {"nama": "Fadilla andia", "nim": "124140104", "nilai_uts": 70, "nilai_uas": 85, "nilai_tugas": 90},
-    {"nama": "Nafisya ghalia", "nim": "124140105", "nilai_uts": 90, "nilai_uas": 85, "nilai_tugas": 70}
+    {"nama": "Fadilla andia", "nim": "124140104", "nilai_uts": 80, "nilai_uas": 85, "nilai_tugas": 90},
+    {"nama": "Nafisya ghalia", "nim": "124140105", "nilai_uts": 90, "nilai_uas": 85, "nilai_tugas": 80}
 ]
 
 for mhs in mahasiswa:
