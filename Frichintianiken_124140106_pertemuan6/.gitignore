@@ -1,0 +1,12 @@
+venv/
+venv_broken/
+.venv/
+__pycache__/
+*.pyc
+*.sqlite
+*.egg-info/
+.pgdata/
+
+# Berkas lokal di luar struktur pengumpulan
+uji-api.ps1
+pyramid_mahasiswa/alembic/script.py.mako
